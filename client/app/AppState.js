@@ -1,4 +1,5 @@
 import { dev } from './env.js'
+import { Bomb } from './Models/Bomb.js'
 import { EventEmitter } from './Utils/EventEmitter.js'
 import { isValidProp } from './Utils/isValidProp.js'
 
@@ -7,6 +8,9 @@ class AppState extends EventEmitter {
   account = {}
   /** @type {import('./Models/Value').Value[]} */
   values = []
+
+  /** @type {import('./models/Bomb').Bomb[]} */
+  bombs = []
   socketData = []
 }
 

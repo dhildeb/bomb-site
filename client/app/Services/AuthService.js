@@ -2,7 +2,7 @@ import { ProxyState } from '../AppState.js'
 import { audience, clientId, domain } from '../env.js'
 import { api } from './AxiosService.js'
 import { accountService } from './AccountService.js'
-import { socketService } from './SocketService.js'
+// import { socketService } from './SocketService.js'
 
 // @ts-ignore
 // eslint-disable-next-line no-undef
@@ -24,7 +24,7 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async() => {
   api.defaults.headers.authorization = AuthService.bearer
   api.interceptors.request.use(refreshAuthToken)
   ProxyState.user = AuthService.user
-  socketService.authenticate(AuthService.bearer)
+  // socketService.authenticate(AuthService.bearer)
   await accountService.getAccount()
 })
 
@@ -35,10 +35,10 @@ async function refreshAuthToken(config) {
   const needsRefresh = expires < Date.now() + (1000 * 60 * 60 * 12)
   if (expired) {
     await AuthService.loginWithPopup()
-    socketService.authenticate(AuthService.bearer)
+    // socketService.authenticate(AuthService.bearer)
   } else if (needsRefresh) {
     await AuthService.getTokenSilently()
-    socketService.authenticate(AuthService.bearer)
+    // socketService.authenticate(AuthService.bearer)
   }
   api.defaults.headers.authorization = AuthService.bearer
   return config
