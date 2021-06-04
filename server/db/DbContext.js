@@ -1,10 +1,12 @@
 import mongoose from 'mongoose'
-import { Value as ValueSchema } from '../models/Value'
+import { BombSchema } from '../models/Bomb'
 import { AccountSchema } from '../models/Account'
+import { CommentSchema } from '../models/Comment'
 
 class DbContext {
-  Values = mongoose.model('Value', ValueSchema);
-  Account = mongoose.model('Account', AccountSchema);
+  Comments = mongoose.model('Comment', CommentSchema)
+  Account = mongoose.model('Account', AccountSchema)
+  Bombs = mongoose.model('Bomb', BombSchema)
 }
 
 export const dbContext = new DbContext()
