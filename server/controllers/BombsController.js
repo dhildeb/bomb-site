@@ -25,7 +25,7 @@ export class BombsController extends BaseController {
 
   async getOne(req, res, next) {
     try {
-      const bomb = await bombsService.getOne(req.params.id)
+      const bomb = await bombsService.getOne(req.params.bombId)
       return res.send(bomb)
     } catch (error) {
       next(error)

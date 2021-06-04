@@ -12,7 +12,7 @@ function _draw() {
 }
 export class BombsController {
   constructor() {
-    ProxyState.on('bombs', _draw)
+    ProxyState.on('api/bombs', _draw)
     bombsService.getBombs()
   }
 
