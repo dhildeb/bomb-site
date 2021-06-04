@@ -20,4 +20,4 @@ class CommentsService {
   }
 }
 
-export const commentsController = new CommentsService()
+export const commentsService = new CommentsService()
