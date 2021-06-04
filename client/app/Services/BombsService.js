@@ -11,6 +11,13 @@ class BombsService {
     const newBomb = new Bomb(res.data)
     ProxyState.bombs = [newBomb, ...ProxyState.bombs]
   }
+
+  async getBombs() {
+    // @ts-ignore
+    // eslint-disable-next-line no-undef
+    const res = await axios.get(url + '/api/boms')
+    ProxyState.bombs = res.data.map(b => new Bomb(b))
+  }
 }
 
 export const bombsService = new BombsService()

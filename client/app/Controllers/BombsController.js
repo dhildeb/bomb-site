@@ -3,14 +3,17 @@ import { bombsService } from '../Services/BombsService.js'
 import { logger } from '../Utils/Logger.js'
 
 function _draw() {
-  logger.log('Drawing bombs')
+  let template = ''
+  ProxyState.bombs.forEach(b => {
+    template += b.Thumbail
+  })
+
+  document.getElementById('bomb-display').innerHTML = template
 }
 export class BombsController {
   constructor() {
     ProxyState.on('bombs', _draw)
-
-    // eslint-disable-next-line no-self-assign
-    ProxyState.bombs = ProxyState.bombs
+    bombsService.getBombs()
   }
 
   drawPost(bombId) {
