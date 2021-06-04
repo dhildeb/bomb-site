@@ -7,7 +7,7 @@ class BombsService {
   async addBomb(formData) {
     // @ts-ignore
     // eslint-disable-next-line no-undef
-    const res = axios.post(url + '/api/bombs', formData)
+    const res = await axios.post(url + '/api/bombs', formData)
     const newBomb = new Bomb(res.data)
     ProxyState.bombs = [newBomb, ...ProxyState.bombs]
   }
