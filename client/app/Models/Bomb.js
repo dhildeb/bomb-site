@@ -4,8 +4,8 @@ export class Bomb {
     this.title = data.title
     this.post = data.post
     this.img = data.img
-    this.likes = 0
-    this.dislikes = 0
+    this.likes = data.likes || 0
+    this.dislikes = data.dislikes || 0
     this.creatorId = data.creatorId
   }
 
