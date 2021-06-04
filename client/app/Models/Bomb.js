@@ -16,7 +16,7 @@ export class Bomb {
           <span class="bomb-title">${this.title}</span>
           </div>
           <card-body class="m-auto">
-            <img src="assets/img/bomb.png" alt="bomb" height="200" width="200" onclick="app.bombsController.drawPost(${this.id})">
+            <img src="assets/img/bomb.png" alt="bomb" height="200" width="200" onclick="app.bombsController.drawPost('${this.id}')">
           </card-body>
         </div>
 

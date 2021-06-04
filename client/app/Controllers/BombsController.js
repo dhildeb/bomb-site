@@ -17,7 +17,9 @@ export class BombsController {
   }
 
   drawPost(bombId) {
-    logger.log('controller connected')
+    console.log('controller connected', bombId)
+    let bombDetails = bombsService.getOneBomb(bombId)
+
   }
 
   addBomb(event) {
