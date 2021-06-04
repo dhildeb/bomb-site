@@ -10,17 +10,16 @@ export class Bomb {
   }
 
   get Thumbail() {
-    return /* html */ ` 
+    return /* html */ `
+
     <div class="card col-4">
-          <div class="card-header text-center">
-          <span class="bomb-title">${this.title}</span>
+          <div class="text-center">
+            <h3 class="bomb-title">${this.title}</h3>
           </div>
           <card-body class="m-auto">
             <img src="assets/img/bomb.png" alt="bomb" height="200" width="200" onclick="app.bombsController.drawPost(${this.id})">
           </card-body>
-        </div>
-
-
+      </div>
     `
   }
 
