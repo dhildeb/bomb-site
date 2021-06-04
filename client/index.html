@@ -13,9 +13,11 @@
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
       <a class="navbar-brand" href="#">
-        <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
         <span class="ml-2">client</span>
       </a>
+      <button class="btn btn-primary">Bangers</button>
+      <button class="btn btn-primary">Duds</button>
+      <button class="btn btn-primary">Recent</button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,7 +33,13 @@
   <main id="app">
     <div class="container-fluid">
       <div class="row my-3">
-        <div class="col-5">
+        <div class="card col-4">
+          <div class="card-header text-center">Title</div>
+          <card-body class="m-auto">
+            <img src="assets/img/bomb.png" alt="bomb" height="200" width="200" onclick="">
+          </card-body>
+        </div>
+        <!-- <div class="col-5">
           <div class="card p-2 skeleton-loader">
             <div class="card-title p-2">
               <div class="d-flex align-items-center">
@@ -45,7 +53,7 @@
               <div class="skeleton-loader text"></div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>
