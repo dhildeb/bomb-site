@@ -1,5 +1,6 @@
 import BaseController from '../utils/BaseController'
 import { Auth0Provider } from '@bcwdev/auth0provider'
+import { bombsService } from '../services/BombsService'
 
 export class BombsController extends BaseController {
   constructor() {
@@ -43,7 +44,7 @@ export class BombsController extends BaseController {
 
   async vote(req, res, next) {
     try {
-      const vote = await bombsService.vote(req.)
+      const vote = await bombsService.vote(req.params.bombId, req.body)
       return res.send(vote)
     } catch (error) {
       next(error)
