@@ -25,7 +25,7 @@ export class Bomb {
 
   get Template() {
     return /* html */`
-    <div class="card col-4 m-auto my-3">
+    <div class="card col-4">
         <div class="card-header text-center">
             <span class="bomb-title">${this.title}</span>
         </div>
@@ -36,6 +36,7 @@ export class Bomb {
               <input type="text" class="form-control" placeholder="comment" aria-label="comments" aria-describedby="button-addon2">
               <button class="btn btn-outline-secondary" type="button" id="button-addon2">add</button>
             </div>
+            <div id="comments"></div>
         </card-body>
     </div>
     `
