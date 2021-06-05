@@ -1,19 +1,27 @@
-.fab{
-    position: fixed;
-    bottom: 5rem;
+/* .fab{
+    position: absolute;
+    bottom: 10rem;
     right: 5rem;
     border-radius: 50%;
-    background-color: rgba(255, 0, 0, 0.699);
     color: rgb(66, 66, 66);
-    z-index: 9;
     height: 50px;
     width: 50px;
-    display: grid;
-    place-content: center;
+} */
+
+.bomb{
+       position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    width: 20px;
+    height: 20px;
 }
 
 .geeks {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
     width: 20px;
+    right: 36px;
     height: 20px;
     background: rgba(128, 19, 0, 0.842);
     border-radius: 50%;
