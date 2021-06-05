@@ -1,4 +1,4 @@
-import { logger } from "../Utils/Logger";
+import { logger } from "../Utils/Logger.js";
 
 export class CommentsController {
   async vote(bombId, voteData) {
