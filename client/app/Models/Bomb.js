@@ -31,7 +31,7 @@ export class Bomb {
         </div>
         <card-body class="m-auto text-center">
             <p>${this.post}</p>
-            <img src="${this.img}" alt="bomb" height="200" width="200"/>
+
             <form onsubmit="app.commentsController.addComment(event, '${this.id}')">
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="comment" aria-label="comments" aria-describedby="button-addon2" id="comment">
