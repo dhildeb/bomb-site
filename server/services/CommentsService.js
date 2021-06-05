@@ -7,8 +7,8 @@ class CommentsService {
 
   async vote(commentId, voteData) {
     const comment = await dbContext.Comments.findById(commentId)
-    voteData.likes.toString() === 'like' ? comment.likes++ : comment.dislikes++
-    await dbContext.Comments.findByIdAndUpdate(commentId, voteData)
+    voteData.likes.toString() == 'like' ? comment.likes++ : comment.dislikes++
+    await dbContext.Comments.findByIdAndUpdate(commentId, comment)
     return comment
   }
 

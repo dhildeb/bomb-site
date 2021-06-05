@@ -10,9 +10,18 @@ function _draw() {
 
   document.getElementById('bomb-display').innerHTML = template
 }
+
+function _drawComments() {
+  let template = ''
+  ProxyState.comments.forEach(c => {
+    template += c.Template
+  })
+  document.getElementById('comments').innerHTML = template
+}
 export class BombsController {
   constructor() {
     ProxyState.on('bombs', _draw)
+    ProxyState.on('comments', _drawComments)
     bombsService.getBombs()
   }
 
