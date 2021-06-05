@@ -1,9 +1,9 @@
 .fab{
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 5rem;
+    right: 5rem;
     border-radius: 50%;
-    background-color: rgb(75, 240, 34);
+    background-color: rgba(255, 0, 0, 0.699);
     color: rgb(66, 66, 66);
     z-index: 9;
     height: 50px;
@@ -11,4 +11,29 @@
     display: grid;
     place-content: center;
     padding: 1rem;
+}
+
+.geeks {
+    width: 20px;
+    height: 20px;
+    background: rgba(128, 19, 0, 0.842);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(127, 153, 127),
+                0 0 40px rgb(127, 153, 127), 
+                0 0 60px rgb(127, 153, 127), 
+                0 0 80px rgb(127, 153, 127), 
+                0 0 120px rgb(127, 153, 127),
+                0 0 220px rgb(127, 153, 127),
+                0 0 320px rgb(127, 153, 127);
+    transition: 2s;
+        }
+          
+.geeks:hover {
+    box-shadow: 0 0 0 30px rgba(224, 48, 25, 0.575), 
+                0 0 0 60px rgba(241, 58, 3, 0.521),
+                0 0 0 100px rgba(224, 83, 83, 0.397),
+                0 0 0 120px rgba(255, 255, 255, 0.479), 
+                0 0 0 200px rgba(214, 72, 37, 0.514),
+                0 0 0 400px rgba(165, 27, 27, 0.37), 
+                0 0 0 450px rgba(255, 239, 90, 0.342);
 }
