@@ -25,8 +25,17 @@ export class Bomb {
   }
 
   get Template() {
-    return /* html */ `
-      
+    return /* html */`
+    <div class="card col-4 m-auto my-3">
+        <div class="card-header text-center">
+            <span class="bomb-title">${this.title}</span>
+        </div>
+        <card-body class="m-auto text-center">
+            <p>${this.post}</p>
+            <img src="${this.img}" alt="bomb" height="200" width="200"/>
+            <button class="btn btn-primary my-3">Post</Button>
+        </card-body>
+    </div>
     `
   }
 }
