@@ -11,7 +11,12 @@ export class Comment {
   get Template() {
     return `
     <div class="d-flex">
-    <i></i>
+      <div>
+        <i>id</i>
+        <span>${this.likes}</span>
+        <span>${this.dislikes}</span>
+      </div>
+      <p>${this.comment}</p>
     </div>
     `
   }
