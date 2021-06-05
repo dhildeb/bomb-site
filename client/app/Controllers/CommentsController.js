@@ -21,14 +21,15 @@ export class CommentsController {
   }
 
   async addComment(event, bombId) {
-    window.event.preventDefault()
+    event.preventDefault()
+    let form = event.target
+    let commentData = {
+      comment: form.comment.value,
+      bombId: bombId
+    }
+    console.log(commentData)
     try {
-      let form = window.event.target
-      let commentData = {
-        comment: form.comment.value
-      }
-      console.log(form)
-      await commentsService.addComment(commentData, bombId)
+      await commentsService.addComment(commentData)
     } catch (error) {
       console.error(error.message)
     }
