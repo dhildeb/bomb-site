@@ -8,6 +8,7 @@ export class BombsController extends BaseController {
     this.router
       .get('', this.getAll)
       .get('/:bombId', this.getOne)
+      .get('/:bombId/comments', this.getBombComments)
       .use(Auth0Provider.getAuthorizedUserInfo)
       .post('', this.create)
       .put('/:bombId', this.vote)
@@ -27,6 +28,15 @@ export class BombsController extends BaseController {
     try {
       const bomb = await bombsService.getOne(req.params.bombId)
       return res.send(bomb)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  async getBombComments(req, res, next) {
+    try {
+      const comments = await bombsService.getBombComments(req.params.bombId)
+      return res.send(comments)
     } catch (error) {
       next(error)
     }

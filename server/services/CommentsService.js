@@ -1,17 +1,14 @@
 import { dbContext } from '../db/DbContext'
 
 class CommentsService {
-  async getAll(query = {}) {
-    return await dbContext.Comments.find(query)
-  }
-
   async create(commentData) {
     return await dbContext.Comments.create(commentData)
   }
 
   async vote(commentId, voteData) {
     const comment = await dbContext.Comments.findById(commentId)
-    voteData.toString() === 'like' ? comment.likes++ : comment.dislikes++
+    voteData.likes.toString() === 'like' ? comment.likes++ : comment.dislikes++
+    await dbContext.Comments.findByIdAndUpdate(commentId, voteData)
     return comment
   }
 

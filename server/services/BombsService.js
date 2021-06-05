@@ -14,13 +14,18 @@ class BombsService {
     return bomb
   }
 
+  async getBombComments(bombId) {
+    return await dbContext.Comments.find({ bombId: bombId })
+  }
+
   async create(bombData) {
     return await dbContext.Bombs.create(bombData)
   }
 
   async vote(bombId, voteData) {
     const bomb = await dbContext.Bombs.findById(bombId)
-    voteData.toString() === 'like' ? bomb.likes++ : bomb.dislikes++
+    voteData.likes.toString() === 'like' ? bomb.likes++ : bomb.dislikes++
+    await dbContext.Bombs.findByIdAndUpdate(bombId, bomb)
     return bomb
   }
 

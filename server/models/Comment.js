@@ -5,8 +5,8 @@ export const CommentSchema = new Schema(
   {
     comment: { type: String, required: true },
     bombId: { type: Schema.Types.ObjectId, ref: 'Bomb', required: true },
-    likes: { type: Number, default: 0 },
-    dislikes: { type: Number, default: 0 },
+    likes: { type: Number },
+    dislikes: { type: Number },
     creatorId: { type: Schema.Types.ObjectId, ref: 'Account', required: true }
   }
 )

@@ -10,8 +10,8 @@ export class Comment {
 
   get Template() {
     return `
-    <div class="">
-    
+    <div class="d-flex">
+    <i></i>
     </div>
     `
   }
