@@ -46,16 +46,18 @@
             </div>
             <div class="form-group">
               <label for="img" id="bombImg">img</label>
-              <input type="text">
+              <input type="text" id="bombImg">
             </div>
             <button type="submit">Post Bomb</button>
           </form>
         </div>
       </div>
 
-      <div class="row my-3" id="bomb-display">
+      <div class="row p-5" id="bomb-display">
         <div class="card col-4">
-          <div class="card-header text-center">Title</div>
+          <div>
+            <h3 class="text-center">Title</h3>
+          </div>
           <card-body class="m-auto">
             <img src="assets/img/bomb.png" alt="bomb" height="200" width="200" onclick="app.bombsController.drawPost()">
           </card-body>
