@@ -1,3 +1,5 @@
+import { commentsService } from "../Services/CommentsService.js"
+
 export class CommentsController {
   async vote(bombId, voteData) {
     try {

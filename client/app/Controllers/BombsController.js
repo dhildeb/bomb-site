@@ -27,7 +27,6 @@ export class BombsController {
 
   drawPost(bombId) {
     this.getBombComments(bombId)
-    console.log('controller connected', bombId)
     //let bombDetails = bombsService.getOneBomb(bombId)
     let bombDetails = ProxyState.bombs.find(b => b.id == bombId)
     document.getElementById("bomb-display").innerHTML = bombDetails.Template
