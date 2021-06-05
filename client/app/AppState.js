@@ -11,6 +11,8 @@ class AppState extends EventEmitter {
 
   /** @type {import('./models/Bomb').Bomb[]} */
   bombs = []
+  /**@type {import('./Models/Comment').Comment[]} */
+  comments = []
   socketData = []
 }
 

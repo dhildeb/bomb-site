@@ -1,6 +1,7 @@
 import { ProxyState } from '../AppState.js'
 import { baseURL } from '../env.js'
 import { Bomb } from '../Models/Bomb.js'
+import { Comment } from "../Models/Comment.js"
 import { api } from "./AxiosService.js"
 
 const url = baseURL
@@ -32,6 +33,10 @@ class BombsService {
     //ProxyState.bombs = res.data.map(b => new Bomb(b))
   }
 
+  async getBombComments(bombId) {
+    let res = await api.get('/api/bombs/' + bombId + '/comments')
+    ProxyState.comments = res.data.map(c => new Comment(c))
+  }
 
 }
 
