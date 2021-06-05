@@ -12,14 +12,15 @@ function _draw() {
 }
 export class BombsController {
   constructor() {
-    ProxyState.on('api/bombs', _draw)
+    ProxyState.on('bombs', _draw)
     bombsService.getBombs()
   }
 
   drawPost(bombId) {
     console.log('controller connected', bombId)
-    let bombDetails = bombsService.getOneBomb(bombId)
-
+    //let bombDetails = bombsService.getOneBomb(bombId)
+    let bombDetails = ProxyState.bombs.find(b => b.id == bombId)
+    document.getElementById("bomb-display").innerHTML = bombDetails.Template
   }
 
   addBomb(event) {
