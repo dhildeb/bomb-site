@@ -6,24 +6,15 @@ export class CommentsController extends BaseController {
   constructor() {
     super('/api/comments')
     this.router
-      .get('', this.getAll)
       .use(Auth0Provider.getAuthorizedUserInfo)
       .post('', this.create)
       .put('/:commentId', this.vote)
       .delete('/:commentId', this.delete)
   }
 
-  async getAll(req, res, next) {
-    try {
-      const comments = await commentsService.getAll()
-      return res.send(comments)
-    } catch (error) {
-      next(error)
-    }
-  }
-
   async create(req, res, next) {
     try {
+      req.body.creatorId = req.userInfo.id
       const comment = await commentsService.create(req.body)
       return res.send(comment)
     } catch (error) {
