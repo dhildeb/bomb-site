@@ -17,6 +17,7 @@ export class BombsController {
   }
 
   drawPost(bombId) {
+    this.getBombComments(bombId)
     console.log('controller connected', bombId)
     //let bombDetails = bombsService.getOneBomb(bombId)
     let bombDetails = ProxyState.bombs.find(b => b.id == bombId)
@@ -36,6 +37,10 @@ export class BombsController {
     } catch (error) {
       logger.log(error.message)
     }
+  }
+
+  async getBombComments(bombId) {
+    await bombsService.getBombComments(bombId)
   }
 
   toggleForm() {

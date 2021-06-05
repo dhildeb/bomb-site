@@ -12,9 +12,11 @@ export class Comment {
     return `
     <div class="d-flex">
       <div>
-        <i>id</i>
-        <span>${this.likes}</span>
-        <span>${this.dislikes}</span>
+        <i>idIcon</i>
+        <div>
+          <span onclick="app.commentsController.vote('${this.bombId},like')">${this.likes}</span>
+          <span onclick="app.commentsController.vote('${this.bombId},dislike')">${this.dislikes}</span>
+        </div>
       </div>
       <p>${this.comment}</p>
     </div>
