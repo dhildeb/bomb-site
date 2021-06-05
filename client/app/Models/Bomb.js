@@ -32,7 +32,10 @@ export class Bomb {
         <card-body class="m-auto text-center">
             <p>${this.post}</p>
             <img src="${this.img}" alt="bomb" height="200" width="200"/>
-            <button class="btn btn-primary my-3">Post</Button>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="comment" aria-label="comments" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">add</button>
+            </div>
         </card-body>
     </div>
     `
