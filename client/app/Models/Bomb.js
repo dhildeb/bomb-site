@@ -36,6 +36,7 @@ export class Bomb {
               <input type="text" class="form-control" placeholder="comment" aria-label="comments" aria-describedby="button-addon2">
               <button class="btn btn-outline-secondary" type="button" id="button-addon2">add</button>
             </div>
+            <div id="comments"></div>
         </card-body>
     </div>
     `
