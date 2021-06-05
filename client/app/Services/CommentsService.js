@@ -7,7 +7,7 @@ class CommentsService {
     console.log(res.data)
   }
 
-  async addComment(commentData, bombId) {
+  async addComment(commentData) {
     let res = await api.post(baseURL + 'api/comments', commentData)
     console.log(res.data)
   }
