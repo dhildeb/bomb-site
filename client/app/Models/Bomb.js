@@ -12,7 +12,7 @@ export class Bomb {
   get Thumbail() {
     return /* html */ `
 
-    <div class="card col-4">
+    <div class="card col-3 m-4 p-4">
           <div class="text-center">
             <h3 class="bomb-title">${this.title}</h3>
           </div>
@@ -25,11 +25,11 @@ export class Bomb {
 
   get Template() {
     return /* html */`
-    <div class="card col-4">
-        <div class="card-header text-center">
+    <div class="card col-4 p-3">
+        <div class="card-header text-center p-3">
             <span class="bomb-title">${this.title}</span>
         </div>
-        <card-body class="m-auto text-center">
+        <card-body class="text-center">
             <p>${this.post}</p>
 
             <form onsubmit="app.commentsController.addComment(event, '${this.id}')">
