@@ -25,7 +25,7 @@ export class Bomb {
 
   get Template() {
     return /* html */`
-    <div class="card col-4 p-3">
+    <div class="card col-8 p-3">
         <div class="card-header text-center p-3">
             <span class="bomb-title">${this.title}</span>
         </div>
